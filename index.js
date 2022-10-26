@@ -10,8 +10,11 @@ const dataCollection = require("./Data/courses.json");
 app.get("/", (req, res) => {
   res.send("Next coder server ready for Run");
 });
-
-
+app.get("/courses", (req, res) => {
+    res.send(dataCollection);
+  });
+  
+ 
 
 app.listen(Port, () => {
   console.log("Next coder server is running", Port);
